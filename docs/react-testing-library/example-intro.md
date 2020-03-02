@@ -32,7 +32,7 @@ test('loads and displays greeting', async () => {
 
   expect(axiosMock.get).toHaveBeenCalledTimes(1)
   expect(axiosMock.get).toHaveBeenCalledWith(url)
-  expect(getByRole('heading')).toHaveTextContent('hello there')
+  expect(greetingTextNode).toHaveTextContent('hello there')
   expect(getByRole('button')).toHaveAttribute('disabled')
 })
 ```
@@ -138,7 +138,7 @@ export default function Fetch({ url }) {
 ```jsx
 expect(axiosMock.get).toHaveBeenCalledTimes(1)
 expect(axiosMock.get).toHaveBeenCalledWith(url)
-expect(getByRole('heading')).toHaveTextContent('hello there')
+expect(greetingTextNode).toHaveTextContent('hello there')
 expect(getByRole('button')).toHaveAttribute('disabled')
 
 // snapshots work great with regular DOM nodes!
